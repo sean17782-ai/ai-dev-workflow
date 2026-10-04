@@ -1,0 +1,8 @@
+{
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "docs",
+  "attachmentFolderPath": "assets",
+  "showUnsupportedFiles": true,
+  "showLineNumber": true
+}

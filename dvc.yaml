@@ -1,0 +1,24 @@
+# DVC 流水线定义
+# 运行: dvc repro
+
+stages:
+  prepare:
+    cmd: python src/prepare.py
+    deps:
+      - src/prepare.py
+    outs:
+      - data/processed:
+          cache: true
+
+  train:
+    cmd: python src/train.py --config configs/experiment.yaml
+    deps:
+      - src/train.py
+      - data/processed
+      - configs/experiment.yaml
+    outs:
+      - models/best_model.pt:
+          cache: true
+    metrics:
+      - metrics.json:
+          cache: false

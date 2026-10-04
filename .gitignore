@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# DVC
+.dvc/cache/
+.dvc/tmp/
+.dvc/cache
+*.dvc
+!data/.gitkeep
+!models/.gitkeep
+
+# W&B
+wandb/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Data & Models (大文件用 DVC 管理，不提交到 Git)
+data/*
+!data/.gitkeep
+models/*
+!models/.gitkeep
+
+# Experiments
+experiments/*
+!experiments/.gitkeep
